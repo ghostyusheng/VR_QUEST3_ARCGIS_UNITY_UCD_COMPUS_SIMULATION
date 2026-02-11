@@ -23,8 +23,6 @@ The primary goal of this project was to design a robust integration pipeline bet
 
 3️⃣ System Architecture
 
-这里写成结构说明：
-
 High-Level Architecture
 
 Unity (XR Runtime)
