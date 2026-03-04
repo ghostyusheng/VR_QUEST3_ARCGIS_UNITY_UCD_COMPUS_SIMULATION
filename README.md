@@ -29,17 +29,22 @@ The system integrates ArcGIS spatial data into a real-time Unity environment, en
 The primary goal of this project was to design a robust integration pipeline between GIS data, Unity runtime rendering, and XR device deployment.
 
 3️⃣ System Architecture
-
+```
 High-Level Architecture
 
-Unity (XR Runtime)
-↕
-ArcGIS SDK for Unity
-↕
-Python Backend (Spatial Data Preparation)
-↕
-Quest 3 Device Deployment
-
+        ArcGIS Spatial Data
+              │
+              ▼
+     ArcGIS SDK for Unity
+              │
+              ▼
+      Unity Simulation Engine
+   (XR Interaction + Scenarios)
+              │
+              ▼
+         Quest 3 Runtime
+        (Immersive VR User)
+```
 4️⃣ Core Features
 Spatial Data Integration
 
