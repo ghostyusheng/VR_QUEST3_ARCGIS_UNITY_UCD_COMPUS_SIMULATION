@@ -15,23 +15,27 @@ This repository is shared for research and educational purposes.
 <img width="1916" height="904" alt="Snipaste_2026-02-11_20-39-28" src="https://github.com/user-attachments/assets/341f13ce-22dd-4be6-800f-6b644920d488" />
 
 
-1️⃣
-VR Quest 3 ArcGIS Unity Campus Simulation
+# VR Quest 3 ArcGIS Unity Campus Simulation
 
-XR-based campus simulation system integrating ArcGIS spatial data into Unity runtime, deployed on Meta Quest 3.
+XR-based campus simulation system integrating **ArcGIS spatial data into Unity runtime**, deployed on **Meta Quest 3**.
 
-2️⃣ Project Overview
+---
 
-This project implements an immersive XR campus simulation system built with Unity and deployed on Meta Quest 3.
+# Project Overview
 
-The system integrates ArcGIS spatial data into a real-time Unity environment, enabling spatial visualization and interactive navigation within a 3D representation of UCD Belfield campus.
+This project implements an **immersive XR campus simulation system** built with **Unity** and deployed on **Meta Quest 3**.
 
-The primary goal of this project was to design a robust integration pipeline between GIS data, Unity runtime rendering, and XR device deployment.
+The system integrates **ArcGIS spatial data** into a real-time Unity environment, enabling **spatial visualization and interactive navigation** within a 3D representation of the **UCD Belfield campus**.
 
-3️⃣ System Architecture
+The primary goal of this project was to design a **robust integration pipeline between GIS data, Unity runtime rendering, and XR device deployment**.
+
+---
+
+# System Architecture
+
+## High-Level Architecture
+
 ```
-High-Level Architecture
-
         ArcGIS Spatial Data
               │
               ▼
@@ -45,85 +49,129 @@ High-Level Architecture
          Quest 3 Runtime
         (Immersive VR User)
 ```
-4️⃣ Core Features
-Spatial Data Integration
 
-Imported ArcGIS spatial datasets into Unity using ArcGIS SDK
+---
 
-Processed GIS layers and mapped geospatial coordinates into Unity world space
+# Core Features
 
-Managed terrain, road network and campus structure rendering
+## Spatial Data Integration
 
-XR Interaction & Navigation
+- Imported **ArcGIS spatial datasets** into Unity using **ArcGIS SDK for Unity**
+- Processed GIS layers and mapped **geospatial coordinates into Unity world space**
+- Managed rendering of:
+  - Terrain
+  - Road networks
+  - Campus infrastructure
 
-Implemented XR locomotion and interaction system
+## XR Interaction & Navigation
 
-Optimized scene rendering for Quest 3 device constraints
+- Implemented **XR locomotion and interaction system**
+- Enabled immersive navigation within the campus environment
+- Optimized scene rendering for **Meta Quest 3 standalone performance**
+- Managed runtime constraints such as GPU usage and memory allocation
 
-Managed runtime performance for standalone headset environment
+## Backend Synchronization
 
-Backend Synchronization
+- Built a **Python-based spatial preprocessing pipeline**
+- Implemented structured data flow between **backend processing and Unity client**
+- Ensured **coordinate consistency and spatial data normalization**
 
-Built Python-based spatial preprocessing pipeline
+## Deployment & Device Debugging
 
-Implemented structured data flow between backend and Unity client
+- Resolved **SDK-level integration issues** specific to Quest 3
+- Configured **Android build environment** for XR deployment
+- Managed **XR plugin compatibility**
+- Prepared deployment documentation and **handover guide**
 
-Ensured coordinate consistency and data normalization
+---
 
-Deployment & Device Debugging
+# Technical Stack
 
-Resolved SDK-level integration issues specific to Quest 3
+| Category | Technology |
+|--------|-----------|
+| Game Engine | Unity |
+| XR Framework | XR Interaction Toolkit |
+| Spatial Data | ArcGIS SDK for Unity |
+| XR Hardware | Meta Quest 3 |
+| Backend Processing | Python |
+| Programming Languages | C# / Python |
+| Deployment Platform | Android |
 
-Handled Android build configuration and XR plugin compatibility
+---
 
-Prepared deployment documentation and handover guide
+# Engineering Challenges
 
-5️⃣ Technical Stack
+## Coordinate System Alignment
 
-Unity (XR Interaction Toolkit)
+One of the main technical challenges was aligning **ArcGIS geospatial coordinates** with **Unity’s world coordinate system** while maintaining spatial accuracy within the simulation environment.
 
-ArcGIS SDK for Unity
+## XR Performance Optimization
 
-Meta Quest 3
+Standalone XR devices impose **GPU and memory constraints**. Scene complexity and asset loading strategies were optimized to maintain **stable frame rates and smooth interaction**.
 
-Python (Data Processing)
+## SDK Compatibility
 
-C#
+Several compatibility issues arose between **Unity XR plugins**, **ArcGIS SDK**, and the **Quest 3 runtime environment**, requiring version management and configuration adjustments to ensure stable builds.
 
-Android Build Environment
+---
 
-6️⃣ Engineering Challenges
+# Repository Structure
 
-Instead of writing “it was hard”, write like this:
-
-Coordinate System Alignment
-
-One of the main technical challenges was aligning ArcGIS geospatial coordinates with Unity’s world coordinate system while maintaining spatial accuracy.
-
-XR Performance Optimization
-
-Standalone XR devices impose GPU and memory constraints. Scene complexity and asset loading strategies were optimized to maintain stable frame rate.
-
-SDK Compatibility
-
-Resolved version conflicts between Unity XR plugins and Quest 3 runtime environment.
-
-7️⃣ Repository Structure
-
+```
 Assets/
 Scripts/
 Backend/
 Build/
 Documentation/
+```
 
-8️⃣ Deployment Guide (Short)
+---
 
-Install Unity version 2022.3.62f1
+# Deployment Guide
 
-Import required XR and ArcGIS packages
+### 1. Install Unity
+
+Install Unity version:
+
+```
+2022.3.62f1
+```
+
+### 2. Import Dependencies
+
+Import required packages:
+
+- XR Interaction Toolkit
+- ArcGIS SDK for Unity
+- Android Build Support
+
+### 3. Configure XR Environment
+
+- Set **Android** as the build target
+- Enable **Quest 3 XR plugin**
+- Configure XR settings within Unity
+
+### 4. Build and Deploy
+
+Build the project and deploy to the device using **ADB**.
 
 Configure Android build target
 
 Enable Quest 3 XR plugin
 
 Build and deploy via ADB
+
+---
+
+# Author
+
+**Yusheng Zhang**
+
+MSc Intelligent Robotics / MSc Computer Science - VR 
+
+Trinity College Dublin
+
+University of York
+
+
+
